@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +9,32 @@
 </head>
 <body>
   <h1>Task Tracker</h1>
-  <input type="text" id="taskInput" placeholder="Add new task">
-  <button onclick="addTask()">Add Task</button>
+
+  <div class="input-section">
+    <input type="text" id="taskInput" placeholder="Add new task">
+    <label for="categoryInput">Category</label>
+    <select id="categoryInput">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Shopping">Shopping</option>
+    </select>
+    <label for="priorityInput">Priority</label>
+    <select id="priorityInput">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <div class="filter-bar">
+    <button onclick="filterTasks('all')">All</button>
+    <button onclick="filterTasks('completed')">Completed</button>
+    <button onclick="filterTasks('pending')">Pending</button>
+  </div>
+
   <ul id="taskList"></ul>
+  
   <script src="script.js"></script>
 </body>
 </html>
-
